@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bejelentkezés</title>
+</head>
+<body>
+<h2>Bejelentkezés</h2>
+<form action="#" th:action="@{/login}" method="post">
+    <div>
+        <label for="felhasznalonev">Felhasználónév:</label>
+        <input type="text" id="felhasznalonev" name="felhasznalonev" required>
+    </div>
+    <div>
+        <label for="jelszo">Jelszó:</label>
+        <input type="password" id="jelszo" name="jelszo" required>
+    </div>
+    <button type="submit">Bejelentkezés</button>
+</form>
+
+<!-- Hibaüzenet megjelenítése, ha van -->
+<div th:if="${error}">
+    <p>Hiba: Rossz felhasználónév vagy jelszó!</p>
+</div>
+
+<div th:if="${param.logout}">
+    <p>Sikeresen kilépett!</p>
+</div>
+</body>
+</html>

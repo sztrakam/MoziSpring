@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Üdvözöljük a MoziSpring weboldalán</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Üdvözöljük a MoziSpring weboldalán!</h1>
+    <nav>
+        <ul>
+            <li th:if="${session.loggedIn == null or not session.loggedIn}"><a href="/login">Belépés</a></li>
+            <li th:if="${session.loggedIn}"><a href="data">Adatok megjelenítése</a></li>
+            <li th:if="${session.loggedIn}"><a href="/logout">Kilépés</a></li>
+            <li th:if="${session.loggedIn}">Üdvözöljük, <span th:text="${username}"></span></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Cégbemutató</h2>
+    <p>Itt írd le a cég történetét és szolgáltatásait.</p>
+</main>
+<footer>
+    <p>&copy; 2024 MoziSpring</p>
+</footer>
+</body>
+</html>
