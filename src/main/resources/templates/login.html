@@ -17,13 +17,8 @@
     <button type="submit">Bejelentkezés</button>
 </form>
 
-<!-- Hibaüzenet megjelenítése, ha van -->
 <div th:if="${error}">
-    <p>Hiba: Rossz felhasználónév vagy jelszó!</p>
-</div>
-
-<div th:if="${param.logout}">
-    <p>Sikeresen kilépett!</p>
+    <p style="color:red;">Hiba: <span th:text="${error}"></span></p>
 </div>
 </body>
 </html>

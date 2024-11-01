@@ -10,7 +10,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String felhaszlonev;
+
+    private String felhasznalonev;
+
     private String jelszo;
 
     public Long getId() {
@@ -22,11 +24,11 @@ public class User {
     }
 
     public String getFelhasznalonev() {
-        return felhaszlonev;
+        return felhasznalonev;
     }
 
-    public void setFelhasznalonev(String felhaszlonev) {
-        this.felhaszlonev = felhaszlonev;
+    public void setFelhasznalonev(String felhasznalonev) {
+        this.felhasznalonev = felhasznalonev;
     }
 
     public String getJelszo() {
