@@ -1,7 +1,6 @@
 package com.example.mozispring.model;
 
 import jakarta.persistence.*;
-
 @Entity
 @Table(name = "eloadas")
 public class Eloadas {
