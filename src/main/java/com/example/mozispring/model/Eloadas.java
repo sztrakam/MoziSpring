@@ -53,3 +53,4 @@ public class Eloadas {
         this.bevetel = bevetel;
     }
 }
+

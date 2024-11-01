@@ -45,3 +45,4 @@ public class Szinhaz {
         this.ferohely = ferohely;
     }
 }
+

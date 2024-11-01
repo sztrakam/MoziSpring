@@ -11,12 +11,11 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     public User validateUser(String felhasznalonev, String jelszo) {
-        User user = userRepository.findByFelhaszlonev(felhasznalonev);
+        User user = userRepository.findByFelhasznalonev(felhasznalonev);
         if (user != null) {
             System.out.println("Felhasználó megtalálva: " + user.getFelhasznalonev());
             System.out.println("Beírt jelszó: " + jelszo);
